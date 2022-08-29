@@ -174,23 +174,18 @@ h3 {
   cursor: default;
 }
 
-.wrapper._active .time-map {
-  position: relative;
-  z-index: -1;
-}
-
 .wrapper._active .page {
   position: relative;
-  z-index: -1;
+  z-index: -2;
 }
 
-.wrapper._active .connections {
+.wrapper._active .timetable {
   position: relative;
   z-index: -1;
 }
 
 .wrapper._active .questions__block1 {
-  top: -145px;
+  top: -99px;
 }
 
 .page {
@@ -323,7 +318,8 @@ h3 {
 }
 
 .close {
-  margin-left: 377px;
+  position: relative;
+  left: 377px;
   margin-top: 45px;
   margin-bottom: 63px;
   width: 99px;
@@ -339,8 +335,10 @@ h3 {
 
 .close-icon {
   position: absolute;
-  left: 406px;
-  top: 74px;
+  top: 30px;
+  left: 30px;
+  width: 41px;
+  height: 43px;
 }
 
 .close-icon:hover {
@@ -574,6 +572,7 @@ h3 {
 }
 
 .services__title {
+  padding-top: 104px;
   margin-left: 103px;
 }
 
@@ -629,6 +628,7 @@ h3 {
 .profit__row {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .profit__image {
@@ -670,6 +670,7 @@ h3 {
 .team__row {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .team__item:nth-child(2) {
@@ -873,7 +874,6 @@ h3 {
 
 .connections__up {
   position: relative;
-  margin-top: 87px;
 }
 
 .no-webp .connections__up > a::after{
@@ -909,6 +909,10 @@ h3 {
     width: calc(315px + 485 * (100vw - 1024px) / 896);
     height: calc(520px + 252 * (100vw - 1024px) / 896);
   }
+
+  .wrapper._active .questions__block1 {
+    top: calc(-99px + 0 * (100vw - 1680px) / 240);
+  }
 }
 
 @media only screen and (max-width: 1708px) {
@@ -918,6 +922,10 @@ h3 {
 }
 
 @media only screen and (max-width: 1680px) {
+  .wrapper._active .questions__block1 {
+    top: calc(-77px + -22 * (100vw - 1024px) / 656);
+  }
+
   .protection__row {
     padding-top: calc(58px + 46 * (100vw - 1024px) / 656);
   }
@@ -969,8 +977,32 @@ h3 {
     top: calc(25px + 4 * (100vw - 1024px) / 656);
   }
 
+  .close {
+    width: calc(77px + 22 * (100vw - 1024px) / 656);
+    height: calc(77px + 22 * (100vw - 1024px) / 656);
+  }
+
+  .close .close-icon {
+    left: calc(22.7px + 7.3 * (100vw - 1024px) / 656);
+    top: calc(24px + 6 * (100vw - 1024px) / 656);
+    width: calc(33px + 8 * (100vw - 1024px) / 656);
+    height: calc(31px + 12 * (100vw - 1024px) / 656);
+  }
+
+  .menu__list li:last-child {
+    margin-left: calc(75px + 68 * (100vw - 1024px) / 656);
+  }
+
+  .menu__list li:last-child a {
+    font-size: calc(20px + 12 * (100vw - 1024px) / 656);
+  }
+
+  .menu__item a {
+    font-size: calc(14px + 10 * (100vw - 1024px) / 656);
+  }
+
   .phone > a::before {
-    left: calc(102px + -33 * (100vw - 1024px) / 656);
+    top: calc(510px + 79 * (100vw - 1024px) / 656);
   }
 
   h1 {
@@ -1248,9 +1280,46 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
+  .wrapper._active .questions__block1 {
+    top: calc(-104px + -41 * (100vw - 320px) / 704);
+  }
+
   h1 {
     font-size: calc(32px + 16 * (100vw - 320px) / 704);
     line-height: calc(36px + 12 * (100vw - 320px) / 704);
+  }
+
+  .menu {
+    width: calc(280px + 216 * (100vw - 320px) / 704);
+  }
+
+  .menu .close {
+    left: calc(190px + 187 * (100vw - 320px) / 704);
+    width: calc(77px + 22 * (100vw - 320px) / 704);
+    height: calc(77px + 22 * (100vw - 320px) / 704);
+  }
+
+  .menu .close .close-icon {
+    left: calc(22.7px + 7.3 * (100vw - 320px) / 704);
+    top: calc(24px + 6 * (100vw - 320px) / 704);
+    width: calc(33px + 8 * (100vw - 320px) / 704);
+    height: calc(31px + 12 * (100vw - 320px) / 704);
+  }
+
+  .menu .menu__list li:last-child {
+    margin-left: calc(75px + 68 * (100vw - 320px) / 704);
+  }
+
+  .menu .menu__list li:last-child a {
+    font-size: calc(20px + 12 * (100vw - 320px) / 704);
+  }
+
+  .menu .menu__item a {
+    font-size: calc(14px + 10 * (100vw - 320px) / 704);
+  }
+
+  .menu .phone > a::before {
+    top: calc(510px + 79 * (100vw - 320px) / 704);
   }
 
   .btn button {
@@ -1540,6 +1609,10 @@ h3 {
     top: calc(-12px + 5 * (100vw - 320px) / 704);
   }
 
+  .connections .connections__row .connections__up {
+    margin-top: calc(23px + 64 * (100vw - 320px) / 624);
+  }
+
   .connections .confidentiality > p {
     font-size: calc(9px + 5 * (100vw - 320px) / 704);
   }
@@ -1549,14 +1622,21 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .connections__row {
-    flex-direction: column;
-    margin-bottom: calc(53px + 34 * (100vw - 320px) / 80);
+@media only screen and (max-width: 580px) {
+  .phone > a::before {
+    left: 19px;
   }
 
-  .connections__row .connections__up {
-    margin-top: calc(53px + 34 * (100vw - 320px) / 80);
+  .phone > a:hover::before {
+    left: 18.4px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .connections__row {
+    align-items: start;
+    flex-direction: column;
+    margin-bottom: 23px;
   }
 }
 
