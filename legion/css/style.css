@@ -184,6 +184,11 @@ h3 {
   z-index: -1;
 }
 
+.wrapper._active .connections {
+  position: relative;
+  z-index: -1;
+}
+
 .wrapper._active .questions__block1 {
   top: -99px;
 }
