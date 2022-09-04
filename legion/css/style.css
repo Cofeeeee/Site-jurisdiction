@@ -1835,6 +1835,7 @@ h3 {
 
   .connections .connections__row .connections__list li:first-child a:first-child {
     line-height: 36px;
+    padding-left: calc(48px + 21 * (100vw - 320px) / 704);
   }
 
   .connections .connections__row .connections__list li:nth-child(2) a {
