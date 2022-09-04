@@ -1667,7 +1667,7 @@ h3 {
   .services .services__title {
     text-align: center;
     margin-left: 0;
-    padding-top: calc(20px + 84 * (100vw - 320px) / 704);
+    padding-top: calc(54px + 50 * (100vw - 320px) / 704);
   }
 
   .services .services__title h2 {
@@ -1683,6 +1683,14 @@ h3 {
   .services .services__row .services__item {
     margin-top: calc(40px + 58 * (100vw - 320px) / 704);
     margin-bottom: calc(60px + 38 * (100vw - 320px) / 704);
+  }
+
+  .services .services__row .services__item:first-child {
+    margin-bottom: 0;
+  }
+
+  .services .services__row .services__item:last-child {
+    margin-top: calc(40px + 58 * (100vw - 320px) / 704);
   }
 
   .services .services__row .services__item-title h3 {
