@@ -1087,7 +1087,6 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
-  background-size: 47px;
   width: 48px;
   height: 48px;
 }
@@ -1545,20 +1544,11 @@ h3 {
   }
 
   .popup__text p:nth-child(2) {
-    font-size: calc(28px + 4 * (100vw - 1024px) / 656);
+    font-size: calc(24px + 8 * (100vw - 1024px) / 656);
   }
 
-  .popup__text p:nth-child(2) a::before {
-    width: calc(43px + 5 * (100vw - 1024px) / 656);
-    height: calc(43px + 5 * (100vw - 1024px) / 656);
-    background-size: calc(42px + 5 * (100vw - 1024px) / 656);
-  }
-
-  .popup__text p:nth-child(2) a:hover::before {
-    width: calc(43px + 5 * (100vw - 1024px) / 656);
-    height: calc(43px + 5 * (100vw - 1024px) / 656);
-    background-size: calc(42px + 5 * (100vw - 1024px) / 656);
-    left: calc(-0.4px + -0.4 * (100vw - 1024px) / 656);
+  .popup__text p:nth-child(2) a {
+    padding-top: calc(6px + -6 * (100vw - 1024px) / 656);
   }
 }
 
@@ -1978,10 +1968,13 @@ h3 {
     line-height: 36px;
   }
 
+  .popup__text p:nth-child(2) {
+    font-size: calc(14px + 10 * (100vw - 320px) / 704);
+  }
+
   .popup__text p:nth-child(2) a {
     bottom: 0;
     left: 0;
-    padding-left: calc(40px + 29 * (100vw - 320px) / 704);
   }
 }
 
