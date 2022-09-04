@@ -587,10 +587,6 @@ h3 {
   justify-content: space-between;
 }
 
-.services__item {
-  width: 50%;
-}
-
 .services__image {
   text-align: center;
 }
@@ -829,6 +825,9 @@ h3 {
 
 .connections__list li:first-child {
   margin-top: 0;
+}
+
+.connections__list li:first-child a:first-child {
   margin-left: 67px;
 }
 
@@ -874,22 +873,32 @@ h3 {
   width: 48px;
   height: 48px;
   top: -7px;
-  left: -0.6px;
+  left: -0.8px;
+}
+
+.connections__circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 82px;
+  min-height: 82px;
+  background: #E4A01D;
+  border-radius: 50%;
+}
+
+.connections__circle:hover {
+  background: #E79800;
+}
+
+.connections__circle img {
+  width: 22px;
+  height: 13px;
 }
 
 .connections__up {
-  position: relative;
-}
-
-.no-webp .connections__up > a::after{
-  background: url("../img/arrow.png") 0 0 no-repeat; }
-
-.connections__up > a::after {
-  content: "";
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  top: -3px;
+  color: #fff;
+  font-size: 20px;
 }
 
 .confidentiality {
@@ -907,6 +916,188 @@ h3 {
   font-size: 14px;
   color: #000;
   letter-spacing: 0.055em;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  font-family: PlayfairDisplay;
+  font-weight: 400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.47);
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup:target .popup__content {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.popup__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.popup__body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 15px;
+}
+
+.popup__content {
+  position: relative;
+  padding: 102px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1614px;
+  max-height: 724px;
+  background: #FFF854;
+  transition: all 0.8s;
+  opacity: 0;
+  transform: translate(0px, -100%);
+}
+
+.popup__close {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  right: 100px;
+}
+
+.popup__close img {
+  width: 48px;
+  height: 48px;
+}
+
+.popup__form {
+  margin-top: -97px;
+  position: relative;
+  z-index: 0;
+  margin-right: 75px;
+}
+
+.popup__form form {
+  width: 499px;
+  height: 428px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.popup__form form input {
+  border: 1px solid #000;
+  padding-left: 19px;
+  font-size: 20px;
+  font-weight: 300;
+  width: 400px;
+  height: 54px;
+  margin-top: 38px;
+}
+
+.popup__form form button {
+  position: absolute;
+  bottom: 48px;
+  right: 50px;
+  width: 162px;
+  height: 54px;
+  background: #FFF854;
+  color: #000;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.popup__form form button:hover {
+  background: #FFDE31;
+}
+
+.popup__block1 {
+  position: absolute;
+  z-index: -1;
+  bottom: -16px;
+  left: -16px;
+  width: 420px;
+  height: 184px;
+  background: #EAB858;
+}
+
+.popup__text {
+  position: relative;
+  z-index: 0;
+  padding-left: 109px;
+  border-left: 1px solid #000;
+}
+
+.popup__block2 {
+  position: absolute;
+  z-index: -1;
+  top: -21px;
+  right: -21px;
+  width: 363px;
+  height: 450px;
+  background: #EAB858;
+}
+
+.popup__text p:first-child {
+  padding-top: 59px;
+  width: 763px;
+  height: 429px;
+  background: #FFF854;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 89px;
+  letter-spacing: 0.095em;
+}
+
+.popup__text p:nth-child(2) {
+  margin-top: 97px;
+  text-align: right;
+  font-size: 32px;
+  letter-spacing: 0.055em;
+}
+
+.popup__text p:nth-child(2) a {
+  padding-left: 69px;
+  position: relative;
+  color: #000;
+}
+
+.no-webp .popup__text p:nth-child(2) a::before{
+  background: url("../img/Whatsup.png") 0 0 no-repeat; }
+
+.popup__text p:nth-child(2) a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 47px;
+  width: 48px;
+  height: 48px;
+}
+
+.no-webp .popup__text p:nth-child(2) a:hover::before{
+  background: url("../img/Whatsup-b.png") 0 0 no-repeat; }
+
+.popup__text p:nth-child(2) a:hover::before {
+  content: "";
+  left: -0.8px;
 }
 
 @media only screen and (max-width: 1920px) {
@@ -1275,12 +1466,99 @@ h3 {
     top: calc(-12px + 5 * (100vw - 1024px) / 656);
   }
 
+  .connections__up .connections__circle {
+    font-size: calc(14px + 6 * (100vw - 1024px) / 656);
+  }
+
+  .connections__circle {
+    min-width: calc(66px + 16 * (100vw - 1024px) / 656);
+    min-height: calc(66px + 16 * (100vw - 1024px) / 656);
+  }
+
+  .connections__circle img {
+    width: calc(14px + 8 * (100vw - 1024px) / 656);
+    height: calc(8px + 5 * (100vw - 1024px) / 656);
+  }
+
   .confidentiality > p {
     font-size: calc(10px + 4 * (100vw - 1024px) / 656);
   }
 
   .confidentiality > p > a {
     font-size: calc(10px + 4 * (100vw - 1024px) / 656);
+  }
+
+  .popup__close {
+    top: calc(60px + 60 * (100vw - 1024px) / 656);
+    right: calc(60px + 60 * (100vw - 1024px) / 656);
+  }
+
+  .popup__close img {
+    width: calc(28px + 20 * (100vw - 1024px) / 656);
+    height: calc(28px + 20 * (100vw - 1024px) / 656);
+  }
+
+  .popup__content {
+    padding: calc(40px + 62 * (100vw - 1024px) / 656);
+  }
+
+  .popup__form {
+    margin-right: calc(40px + 35 * (100vw - 1024px) / 656);
+  }
+
+  .popup__form form {
+    width: calc(349px + 150 * (100vw - 1024px) / 656);
+  }
+
+  .popup__form form input {
+    font-size: calc(14px + 6 * (100vw - 1024px) / 656);
+    width: calc(280px + 120 * (100vw - 1024px) / 656);
+  }
+
+  .popup__form form button {
+    right: calc(35px + 15 * (100vw - 1024px) / 656);
+    width: calc(120px + 42 * (100vw - 1024px) / 656);
+    font-size: calc(14px + 6 * (100vw - 1024px) / 656);
+  }
+
+  .popup__block1 {
+    bottom: calc(-12px + -4 * (100vw - 1024px) / 656);
+    left: calc(-12px + -4 * (100vw - 1024px) / 656);
+    width: calc(270px + 150 * (100vw - 1024px) / 656);
+  }
+
+  .popup__text {
+    padding-left: calc(69px + 40 * (100vw - 1024px) / 656);
+  }
+
+  .popup__block2 {
+    top: calc(-16px + -5 * (100vw - 1024px) / 656);
+    right: calc(-16px + -5 * (100vw - 1024px) / 656);
+    width: calc(240px + 123 * (100vw - 1024px) / 656);
+    height: calc(445px + 5 * (100vw - 1024px) / 656);
+  }
+
+  .popup__text p:first-child {
+    width: calc(450px + 313 * (100vw - 1024px) / 656);
+    font-size: calc(32px + 16 * (100vw - 1024px) / 656);
+    line-height: calc(62px + 27 * (100vw - 1024px) / 656);
+  }
+
+  .popup__text p:nth-child(2) {
+    font-size: calc(28px + 4 * (100vw - 1024px) / 656);
+  }
+
+  .popup__text p:nth-child(2) a::before {
+    width: calc(43px + 5 * (100vw - 1024px) / 656);
+    height: calc(43px + 5 * (100vw - 1024px) / 656);
+    background-size: calc(42px + 5 * (100vw - 1024px) / 656);
+  }
+
+  .popup__text p:nth-child(2) a:hover::before {
+    width: calc(43px + 5 * (100vw - 1024px) / 656);
+    height: calc(43px + 5 * (100vw - 1024px) / 656);
+    background-size: calc(42px + 5 * (100vw - 1024px) / 656);
+    left: calc(-0.4px + -0.4 * (100vw - 1024px) / 656);
   }
 }
 
@@ -1614,8 +1892,18 @@ h3 {
     top: calc(-12px + 5 * (100vw - 320px) / 704);
   }
 
-  .connections .connections__row .connections__up {
-    margin-top: calc(23px + 64 * (100vw - 320px) / 624);
+  .connections .connections__row .connections__up .connections__circle {
+    font-size: calc(14px + 6 * (100vw - 320px) / 704);
+  }
+
+  .connections .connections__row .connections__circle {
+    min-width: calc(66px + 16 * (100vw - 320px) / 704);
+    min-height: calc(66px + 16 * (100vw - 320px) / 704);
+  }
+
+  .connections .connections__row .connections__circle img {
+    width: calc(14px + 8 * (100vw - 320px) / 704);
+    height: calc(8px + 5 * (100vw - 320px) / 704);
   }
 
   .connections .confidentiality > p {
@@ -1624,6 +1912,76 @@ h3 {
 
   .connections .confidentiality > p > a {
     font-size: calc(9px + 5 * (100vw - 320px) / 704);
+  }
+
+  .popup__content {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: calc(15px + 25 * (100vw - 320px) / 704);
+  }
+
+  .popup__close {
+    top: 15px;
+    right: 15px;
+  }
+
+  .popup__close img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .popup__form {
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .popup__form form {
+    margin-top: 40px;
+    width: calc(250px + 99 * (100vw - 320px) / 704);
+  }
+
+  .popup__form form input {
+    font-size: 14px;
+    width: calc(220px + 20 * (100vw - 320px) / 704);
+  }
+
+  .popup__form form button {
+    right: calc(15px + 40 * (100vw - 320px) / 704);
+    width: calc(100px + 20 * (100vw - 320px) / 704);
+    font-size: 14px;
+  }
+
+  .popup__block1 {
+    display: none;
+  }
+
+  .popup__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    text-align: center;
+    border-left: none;
+  }
+
+  .popup__block2 {
+    display: none;
+  }
+
+  .popup__text p:first-child {
+    padding-bottom: 40px;
+    padding-top: 0;
+    font-weight: 800;
+    width: calc(250px + 50 * (100vw - 320px) / 704);
+    height: 0;
+    font-size: calc(16px + 4 * (100vw - 320px) / 704);
+    line-height: 36px;
+  }
+
+  .popup__text p:nth-child(2) a {
+    bottom: 0;
+    left: 0;
+    padding-left: calc(40px + 29 * (100vw - 320px) / 704);
   }
 }
 
@@ -1637,14 +1995,6 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .connections__row {
-    align-items: start;
-    flex-direction: column;
-    margin-bottom: 23px;
-  }
-}
-
 .webp .phone > a::before{ background: url(../img/Whatsup.webp) 0 0 no-repeat; }
 
 .webp .phone > a:hover::before{ background: url(../img/Whatsup-b.webp) 0 0 no-repeat; }
@@ -1653,4 +2003,6 @@ h3 {
 
 .webp .phone-f > a:hover::before{ background: url(../img/Whatsup-b.webp) 0 0 no-repeat; }
 
-.webp .connections__up > a::after{ background: url(../img/arrow.webp) 0 0 no-repeat; }
+.webp .popup__text p:nth-child(2) a::before{ background: url(../img/Whatsup.webp) 0 0 no-repeat; }
+
+.webp .popup__text p:nth-child(2) a:hover::before{ background: url(../img/Whatsup-b.webp) 0 0 no-repeat; }

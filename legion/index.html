@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220831183821">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220904145929">
 	<title>Главная</title>
 </head>
 
@@ -70,7 +70,7 @@
 								<p>на платной консультации юриста.</p>
 							</div>
 							<div class="questions__button btn">
-								<button>Записаться на консультацию </button>
+								<a href="#popup" class="popup-link"><button>Записаться на консультацию </button></a>
 							</div>
 						</div>
 					</div>
@@ -135,7 +135,7 @@
 								</p>
 							</div>
 							<div class="protection__button btn">
-								<button>Записаться на консультацию </button>
+								<a href="#popup" class="popup-link"><button>Записаться на консультацию </button></a>
 							</div>
 						</div>
 						<div class="protection__image">
@@ -177,7 +177,7 @@
 						</div>
 					</div>
 					<div class="services__button btn">
-						<button>Записаться на консультацию </button>
+						<a href="#popup" class="popup-link"><button>Записаться на консультацию </button></a>
 					</div>
 				</div>
 			</section>
@@ -276,7 +276,7 @@
 							<div class="about__block2"></div>
 						</div>
 						<div class="about__button btn">
-							<button>Записаться на консультацию </button>
+							<a href="#popup" class="popup-link"><button>Записаться на консультацию </button></a>
 						</div>
 					</div>
 					<div class="about__image">
@@ -296,9 +296,12 @@
 							2</a></li>
 				</ul>
 			</div>
-			<div class="connections__up">
-				<a href="#up">Наверх</a>
-			</div>
+			<a class="connections__up" href="#up">
+				<div class="connections__circle">
+					<picture><source srcset="img/arrow-up.webp" type="image/webp"><img src="img/arrow-up.png" alt=""></picture>
+					Вверх
+				</div>
+			</a>
 		</div>
 	</div>
 	<div class="confidentiality">
@@ -306,8 +309,30 @@
 	</div>
 </footer>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20220831183821"></script>
-	<script src="js/app.min.js?_v=20220831183821"></script>
+	<div id="popup" class="popup">
+		<a href="##" class="popup__area"></a>
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close" href="##"><picture><source srcset="img/free-icon-close-4947222.webp" type="image/webp"><img src="img/free-icon-close-4947222.png" alt=""></picture></a>
+				<div class="popup__form">
+					<form action="POST">
+						<input type="name" placeholder="Имя" name="name" required>
+						<input type="tel" placeholder="Номер телефона" name="tel" required>
+						<input type="text" placeholder="Email (необязательно)" name="email" required>
+						<button type="submit" name="send" class="send">Отправить</button>
+					</form>
+					<div class="popup__block1"></div>
+				</div>
+				<div class="popup__text">
+					<p class="popup__item phone-p">Заполните форму<br>регистрации и мы вам<br>обязательно перезвоним!</p>
+					<p class="popup__item"><a href="tel:8 (961) 488-22-38:">8 (961) 488-22-38</a></p>
+					<div class="popup__block2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20220904145929"></script>
+	<script src="js/app.min.js?_v=20220904145929"></script>
 </body>
 
 </html>
