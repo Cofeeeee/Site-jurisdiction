@@ -300,6 +300,8 @@ h3 {
 }
 
 .menu {
+  overflow-y: auto;
+  overflow-x: hidden;
   position: fixed;
   transition: 0.5s;
   z-index: 3;
@@ -372,6 +374,7 @@ h3 {
 
 .menu__list li:last-child {
   padding-top: 47px;
+  padding-bottom: 47px;
   margin-bottom: 0px;
   border-top: 1px solid #000;
   margin-left: 143px;
