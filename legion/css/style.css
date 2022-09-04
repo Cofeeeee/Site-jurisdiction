@@ -861,7 +861,6 @@ h3 {
 
 .phone-f > a::before {
   content: "";
-  background-size: 47px;
   position: absolute;
   width: 48px;
   height: 48px;
@@ -874,7 +873,6 @@ h3 {
 
 .phone-f > a:hover::before {
   content: "";
-  background-size: 47px;
   position: absolute;
   width: 48px;
   height: 48px;
@@ -1428,29 +1426,12 @@ h3 {
     font-size: calc(20px + 12 * (100vw - 1024px) / 656);
   }
 
-  .connections__list li:first-child a:first-child {
-    line-height: 32px;
-    padding-left: calc(49px + 20 * (100vw - 1024px) / 656);
-  }
-
   .connections__list li:nth-child(2) a {
     font-size: calc(14px + 6 * (100vw - 1024px) / 656);
   }
 
   .connections__list li:last-child a {
     font-size: calc(10px + 4 * (100vw - 1024px) / 656);
-  }
-
-  .phone-f > a::before {
-    background-size: calc(41px + 6 * (100vw - 1024px) / 656);
-    width: calc(42px + 6 * (100vw - 1024px) / 656);
-    height: calc(42px + 6 * (100vw - 1024px) / 656);
-  }
-
-  .phone-f > a:hover::before {
-    background-size: calc(41px + 6 * (100vw - 1024px) / 656);
-    width: calc(42px + 6 * (100vw - 1024px) / 656);
-    height: calc(42px + 6 * (100vw - 1024px) / 656);
   }
 
   .connections__up .connections__circle {
@@ -1853,7 +1834,7 @@ h3 {
   }
 
   .connections .connections__row .connections__list li:first-child a:first-child {
-    padding-left: calc(49px + 20 * (100vw - 320px) / 704);
+    line-height: 36px;
   }
 
   .connections .connections__row .connections__list li:nth-child(2) a {
@@ -1862,18 +1843,6 @@ h3 {
 
   .connections .connections__row .connections__list li:last-child a {
     font-size: calc(10px + 4 * (100vw - 320px) / 704);
-  }
-
-  .connections .connections__row .phone-f > a::before {
-    background-size: calc(41px + 6 * (100vw - 320px) / 704);
-    width: calc(42px + 6 * (100vw - 320px) / 704);
-    height: calc(42px + 6 * (100vw - 320px) / 704);
-  }
-
-  .connections .connections__row .phone-f > a:hover::before {
-    background-size: calc(41px + 6 * (100vw - 320px) / 704);
-    width: calc(42px + 6 * (100vw - 320px) / 704);
-    height: calc(42px + 6 * (100vw - 320px) / 704);
   }
 
   .connections .connections__row .connections__up .connections__circle {
